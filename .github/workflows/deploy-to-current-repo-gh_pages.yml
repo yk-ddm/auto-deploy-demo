@@ -8,10 +8,8 @@ jobs:
       uses: actions/checkout@master
 
     - name: Build and Deploy
-      uses: jenkey2011/vuepress-deploy@master
+      uses: yk-ddm/auto-deploy@master
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        TARGET_REPO: yk-ddm/springboot_EAMS
+        TARGET_REPO: yk-ddm/auto-deploy-demo
         TARGET_BRANCH: gh_pages
-        BUILD_SCRIPT: yarn && yarn build
-        BUILD_DIR: blog/.vuepress/dist/
